@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Counter from './Counter';
+
 
 const propTypes = {
-
+    number: PropTypes.number
 };
 
 const defaultProps = {
-
+    number: -1
 };
 
-class App extends Component {
+class Value extends Component {
     
     constructor(props) {
         super(props);
@@ -19,13 +19,13 @@ class App extends Component {
     render() {
         return (
             <div>
-             <Counter/>
+             <h1>{this.props.number}</h1>
             </div>
         );
     }
 }
 
-App.propTypes = PropTypes;
-App.defaultProps = defaultProps;
+Value.propTypes = propTypes;
+Value.defaultProps = defaultProps;
 
-export default App;
+export default Value;
